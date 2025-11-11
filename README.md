@@ -1,16 +1,50 @@
-# React + Vite
+# ❄️ Portfolio — React | Vite | Framer Motion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> _A portfolio that doesn’t shout — it hums quietly in precision._
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧊 About
 
-## React Compiler
+This isn’t a playground.  
+It’s a **digital mirror** — built to reflect clean structure, subtle movement, and disciplined design.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Made for those who appreciate **clarity over clutter**, and **silence over noise**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Framework & Stack
+
+> Powered by tools that value performance and elegance.
+
+| Purpose | Stack |
+|----------|--------|
+| Framework | **React 19** |
+| Styling | **Bootstrap** |
+| Build Tool | **Vite 7** |
+| Animations | **Framer Motion 12** |
+| UI Interaction | **Swiper 12** |
+| Linting | **ESLint 9** |
+| Language | **TypeScript-ready (with React types)** |
+
+---
+
+## 🧩 Features
+
+- ⚡ Lightning-fast dev environment with **Vite**
+- 🌀 Fluid animations via **Framer Motion**
+- 🎞️ Interactive slides powered by **Swiper**
+- 🌑 Minimalist, responsive layout
+- 🧠 Clean structure — no unnecessary abstractions
+
+---
+
+## 🚀 Setup
+
+Run it like you mean it.
+
+```bash
+git clone https://github.com/Chirag-Berde/chirag-portfolio.git
+cd cb-portfolio
+npm install
+npm run dev
