@@ -54,4 +54,8 @@
     font-size: 14px;
     font-weight: 500;
   }
+
+  .herobanner-additional-content-text br{
+    display: none;
+  }
 }
