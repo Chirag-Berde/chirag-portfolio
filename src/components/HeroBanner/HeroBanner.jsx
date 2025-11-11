@@ -87,7 +87,7 @@ const HeroBanner = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
         >
-          Hello! I'm CB.
+          Hello! I'm Chirag Berde.
         </motion.div>
 
         <motion.h1
