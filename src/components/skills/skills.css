@@ -1,0 +1,58 @@
+.skills {
+  padding: 3rem 0;
+}
+
+.skills {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+}
+
+.skills-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* When hovered, pause animation */
+.skills-wrapper:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.skills-wrapper img {
+  max-width: 200px;
+  max-height: 150px;
+  height: auto;
+}
+
+/* Default grayscale images */
+.skills-wrapper img {
+  width: 200px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+/* On hover, show original color */
+.skills-wrapper img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills {
+    padding: 2rem 0;
+  }
+}

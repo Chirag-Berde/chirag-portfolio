@@ -1,0 +1,84 @@
+.header-leftcolumn span {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.header-button a {
+  padding: 0.75rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.header-button a:hover {
+  color: white !important;
+  background: #000000;
+  transition: 1s;
+}
+
+.header-rightcolumn .hamburger {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+}
+.header-rightcolumn .hamburger:hover {
+  cursor: pointer;
+}
+
+/* inner wrapper */
+.headerInnerWrapper .links-text {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.links-arrow {
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
+}
+
+/* animation */
+.headerInnerWrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+}
+
+.headerInnerWrapper.show {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+.headerInnerWrapper.show .headerInnerWrapper-link {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+
+.headerInnerWrapper-link {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.headerInnerWrapper.show .headerInnerWrapper-link:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.headerInnerWrapper.show .headerInnerWrapper-link:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.headerInnerWrapper.show .headerInnerWrapper-link:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.headerInnerWrapper.show .headerInnerWrapper-link:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.headerInnerWrapper.show .headerInnerWrapper-link:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+@media screen and (max-width: 992px) {
+  .headerInnerWrapper .links-text {
+    font-size: 30px;
+    line-height: 1;
+  }
+}

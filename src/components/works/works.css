@@ -1,0 +1,46 @@
+.works {
+  padding: 3rem 0;
+}
+
+.works .works-title-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.works-title-rightcolumn a {
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  display: inline-block;
+}
+.works-title-rightcolumn a:hover {
+  color: white !important;
+  background: #000000;
+  transition: 1s;
+}
+
+.works-data-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.works-data-subtitle {
+  font-size: 18px;
+}
+
+.works-data-cta-arow {
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.works-data-img img {
+  border-radius: 26px;
+}
+
+@media screen and (max-width: 992px) {
+  .works {
+    padding: 2rem 0;
+  }
+}

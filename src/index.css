@@ -1,0 +1,50 @@
+:root {
+  font-family: "Geist", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: "Geist", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+.text-gray {
+  color: #eaeaea;
+}
+
+.text-black {
+  color: #000000;
+}
+.text-black-2 {
+  color: #3f3f3f;
+}
+
+.text-gray-2 {
+  color: #a0a0a0;
+}
+
+.border-black {
+  border: 1px solid black;
+}
+
+.border-white {
+  border: 1px solid white;
+}
+
+.border-gray {
+  border: 1px solid #eaeaea;
+}
+
+.border-gray-2 {
+  border: 1px solid #3f3f3f;
+}
+
+.h-100-dvh {
+  height: 100dvh;
+}

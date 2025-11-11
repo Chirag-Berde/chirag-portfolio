@@ -1,0 +1,28 @@
+.connect {
+  padding: 3rem 0;
+}
+
+.connect-title {
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.connect-subtitle {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.connect-email a {
+  text-decoration: underline;
+  font-size: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .connect {
+    padding: 2rem 0;
+  }
+  .connect-title {
+    font-size: 3.5rem;
+    line-height: 1;
+  }
+}
