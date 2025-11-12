@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Geist", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -47,4 +48,12 @@ a:hover {
 
 .h-100-dvh {
   height: 100dvh;
+}
+
+.border-top-gray {
+  border-top: 1px solid gray;
+}
+
+.border-bottom-gray {
+  border-bottom: 1px solid gray;
 }
