@@ -1,30 +1,55 @@
 .skills {
   padding: 3rem 0;
-  overflow: hidden;
-  width: 100%;
   background: #fff;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.skills-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  width: max-content;
+.skills::before,
+.skills::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.skills-wrapper:hover {
-  cursor: pointer;
+.skills::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.skills-wrapper img {
-  max-width: 200px;
-  max-height: 150px;
+.skills::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.skills-swiper {
+  width: 100%;
+  cursor: grab;
+}
+
+.skill-img {
+  max-width: 130px;
+  max-height: 180px;
+  width: 100%;
+  height: auto;
   filter: grayscale(100%);
+  transition: filter 0.4s ease;
+  margin: auto;
+  display: block;
 }
 
-.skills-wrapper img:hover {
+.skill-img:hover {
   filter: grayscale(0%);
   cursor: pointer;
+}
+
+.swiper-wrapper {
+  align-items: center;
 }
 
 @media screen and (max-width: 992px) {
