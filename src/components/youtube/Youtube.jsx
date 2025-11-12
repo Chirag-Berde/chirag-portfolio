@@ -225,7 +225,7 @@ const Youtube = () => {
             navigation
             pagination={{ clickable: true }}
             breakpoints={{
-              0: { slidesPerView: 2 },
+              0: { slidesPerView: 1.5 },
               768: { slidesPerView: 2 },
               992: { slidesPerView: 3 },
             }}

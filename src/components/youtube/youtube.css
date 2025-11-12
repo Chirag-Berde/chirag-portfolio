@@ -129,9 +129,6 @@
     font-size: 0.75rem;
   }
   .youtube-overlay {
-    padding: 0 1.5rem;
-  }
-  .youtube-thumbnail img {
-    height: 200px;
+    padding: 0 1.5rem .5rem;
   }
 }
