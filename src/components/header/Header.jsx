@@ -60,7 +60,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
             })}
           </div>
           <div className="row gy-3 headerInnerWrapper-bottomcontent border-top-gray pt-lg-4 pt-3 align-items-center" >
-            <div className="col-lg-7">
+            <div className="col-lg-12">
               <div className="text-gray-2 bottomcontent-title">Follow me.</div>
               <div className="row gy-3 mt-lg-4 mt-2">
                 <a
@@ -115,12 +115,6 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                     className="img-fluid"
                   />
                 </a>
-              </div>
-            </div>
-            <div className="col-lg-5 mt-lg-0 mt-5">
-              <div className="text-gray-2 bottomcontent-title">Stay connected w/ me.</div>
-              <div className="bottomcontent-email mt-4">
-                 <input name="email" type="email" placeholder="Enter your email" className="text-gray-2 border-light border-bottom w-100 pb-3" autoComplete="false"/>
               </div>
             </div>
           </div>

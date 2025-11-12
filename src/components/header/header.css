@@ -78,13 +78,6 @@
 .bottomcontent-title {
   font-size: 1.375rem;
 }
-.bottomcontent-email input[type="email"] {
-  background: transparent;
-  border: none;
-  outline: none;
-  background: url("../../assets/ArrowUpRight.webp") no-repeat right center;
-  background-size: 20px;
-}
 
 @media screen and (max-width: 992px) {
   .headerInnerWrapper .links-text {
