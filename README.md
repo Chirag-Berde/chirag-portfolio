@@ -25,7 +25,7 @@ Made for those who appreciate **clarity over clutter**, and **silence over noise
 | Animations | **Framer Motion 12** |
 | UI Interaction | **Swiper 12** |
 | Linting | **ESLint 9** |
-| Language | **TypeScript-ready (with React types)** |
+| Language | **Javascript** |
 
 ---
 
