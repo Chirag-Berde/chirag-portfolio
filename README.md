@@ -1,4 +1,4 @@
-# ❄️ Portfolio — React | Vite | Framer Motion
+# ❄️ Portfolio — React 
 
 > _A portfolio that doesn’t shout — it hums quietly in precision._
 
