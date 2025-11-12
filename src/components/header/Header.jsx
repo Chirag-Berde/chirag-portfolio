@@ -29,7 +29,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
   ];
   return (
     <div
-      className={`container-fluid position-absolute bg-dark ${
+      className={`container-fluid bg-dark ${
         showLinks ? "vh-100" : ""
       }`}
     >
@@ -116,7 +116,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                   />
                 </a>
               </div>
-            </div>
+            </div>           
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@ const Header = () => {
     setShowLinks((prev) => !prev);
   };
   return (
-    <nav className={`${bgVisible ? "bg-dark" : ""} position-relative`}>
+    <nav className={`${bgVisible ? "bg-dark position-fixed w-100" : ""}`}>
       <div className="container">
         <div
           className={`${

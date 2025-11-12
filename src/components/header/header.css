@@ -79,6 +79,11 @@
   font-size: 1.375rem;
 }
 
+.vh-100.position-fixed,
+nav.position-fixed {
+  z-index: 150909;
+}
+
 @media screen and (max-width: 992px) {
   .headerInnerWrapper .links-text {
     font-size: 1.5rem;
