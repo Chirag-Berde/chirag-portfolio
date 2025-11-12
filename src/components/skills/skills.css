@@ -56,4 +56,8 @@
   .skills {
     padding: 2rem 0;
   }
+
+  .skill-img {
+    filter: grayscale(0%);
+  }
 }
