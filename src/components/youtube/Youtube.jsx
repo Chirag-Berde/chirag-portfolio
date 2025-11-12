@@ -225,7 +225,7 @@ const Youtube = () => {
             navigation
             pagination={{ clickable: true }}
             breakpoints={{
-              0: { slidesPerView: 1 },
+              0: { slidesPerView: 2 },
               768: { slidesPerView: 2 },
               992: { slidesPerView: 3 },
             }}
@@ -251,7 +251,7 @@ const Youtube = () => {
                       <div className="youtube-title text-white mb-2">
                         {item.title}
                       </div>
-                      <div className="youtube-description text-light">
+                      <div className="youtube-description text-light d-lg-block d-none">
                         {item.description}
                       </div>
                     </div>

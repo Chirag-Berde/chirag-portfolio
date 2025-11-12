@@ -125,4 +125,10 @@
   .youtube {
     padding: 2rem 0;
   }
+  .youtube-title{
+    font-size: .75rem;
+  }
+  .youtube-overlay{
+    padding: 0 1.5rem;
+  }
 }
