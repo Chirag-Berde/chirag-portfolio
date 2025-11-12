@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import "./skills.css";
 import htmlImg from "../../assets/skills/html.webp";
 import cssImg from "../../assets/skills/css.webp";
@@ -35,12 +35,21 @@ const Skills = () => {
     { img: { src: sourcetreeImg, alt: "sourcetree" } },
   ];
 
-  // Duplicate for infinite effect
   const loopedSkills = [...skillsData, ...skillsData];
 
   return (
     <section className="skills" id="skill">
-      <div className="skills-wrapper">
+      <motion.div
+        className="skills-wrapper"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+          duration: 50,
+        }}
+        whileHover={{ x: null }}
+      >
         {loopedSkills.map((item, index) => (
           <img
             className="img-fluid"
@@ -51,7 +60,7 @@ const Skills = () => {
             decoding="async"
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
