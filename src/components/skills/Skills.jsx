@@ -56,6 +56,10 @@ const Skills = () => {
           640: { slidesPerView: 3, spaceBetween: 30 },
           992: { slidesPerView: 5, spaceBetween: 40 },
           1200: { slidesPerView: 7, spaceBetween: 50 },
+          1600: { slidesPerView: 8, spaceBetween: 60 }, 
+          1920: { slidesPerView: 9, spaceBetween: 70 }, 
+          2560: { slidesPerView: 10, spaceBetween: 80 }, 
+          3840: { slidesPerView: 12, spaceBetween: 100 },
         }}
       >
         {skillsData.map((item, index) => (
