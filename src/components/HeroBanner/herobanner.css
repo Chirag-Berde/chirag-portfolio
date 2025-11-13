@@ -1,6 +1,7 @@
 .herobanner {
   padding: 3rem 0;
 }
+
 .herobanner-name {
   font-size: 28px;
   font-weight: 500;
@@ -41,6 +42,7 @@
   .herobanner {
     padding: 2rem 0;
   }
+  
   .herobanner-title {
     font-size: 3.5rem;
     line-height: 54px;
@@ -55,7 +57,7 @@
     font-weight: 500;
   }
 
-  .herobanner-additional-content-text br{
+  .herobanner-additional-content-text br {
     display: none;
   }
 }

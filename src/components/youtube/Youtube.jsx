@@ -151,12 +151,10 @@ const Youtube = () => {
     },
   ];
 
-  // 👇 Ref for Swiper container
   const swiperRef = useRef(null);
   const isInView = useInView(swiperRef, { amount: 0.3 });
   const [swiperInstance, setSwiperInstance] = useState(null);
 
-  // Start/stop autoplay when visibility changes
   React.useEffect(() => {
     if (swiperInstance) {
       if (isInView) {
@@ -203,7 +201,7 @@ const Youtube = () => {
           ref={swiperRef}
         >
           <Swiper
-            onSwiper={setSwiperInstance} // capture Swiper instance
+            onSwiper={setSwiperInstance}
             modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
             effect="coverflow"
             grabCursor={true}

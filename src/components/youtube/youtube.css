@@ -22,8 +22,6 @@
   transition: 1s;
 }
 
-/* --- New Swiper / Overlay Styles --- */
-
 .youtube-swiper {
   padding-bottom: 60px;
 }
@@ -42,7 +40,6 @@
   opacity: 1;
 }
 
-/* Card and Overlay Styles */
 .youtube-thumbnail {
   position: relative;
   overflow: hidden;
@@ -125,10 +122,12 @@
   .youtube {
     padding: 2rem 0;
   }
+
   .youtube-title {
     font-size: 0.75rem;
   }
+
   .youtube-overlay {
-    padding: 0 1.5rem .5rem;
+    padding: 0 1.5rem 0.5rem;
   }
 }

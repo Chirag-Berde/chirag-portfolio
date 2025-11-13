@@ -4,6 +4,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-family: "Geist", sans-serif;
   overflow-x: hidden;
@@ -12,9 +13,11 @@ body {
 a {
   text-decoration: none;
 }
+
 a:hover {
   cursor: pointer;
 }
+
 .text-gray {
   color: #eaeaea;
 }
@@ -22,6 +25,7 @@ a:hover {
 .text-black {
   color: #000000;
 }
+
 .text-black-2 {
   color: #3f3f3f;
 }

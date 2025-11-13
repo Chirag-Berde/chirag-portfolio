@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import About from "./components/about/About";
 import Certificates from "./components/certificates/Certificates";
 import Connect from "./components/connect/Connect";
@@ -19,10 +18,10 @@ function App() {
       <About />
       <Skills />
       <Certificates />
-      <Youtube/>
+      <Youtube />
       <Connect />
-      <Footer/>
-      <ScrollToTopButton/>
+      <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

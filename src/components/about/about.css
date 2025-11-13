@@ -6,14 +6,13 @@
   font-size: 4.75rem;
   font-weight: 600;
   letter-spacing: -4px;
-  /* max-width: 856px; */
   line-height: 1;
 }
 
 .about-description {
-  /* max-width: 700px; */
   font-size: 18px;
 }
+
 .about-cta a {
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
@@ -26,18 +25,22 @@
   background: #000000;
   transition: 1s;
 }
+
 .about-lists li {
   list-style: none;
   font-size: 18px;
   text-align: right;
 }
+
 .about-lists.d-lg-none li {
   text-align: start;
 }
+
 @media screen and (max-width: 992px) {
   .about {
     padding: 2rem 0;
   }
+  
   .about-title {
     font-size: 3.75rem;
     line-height: 54px;

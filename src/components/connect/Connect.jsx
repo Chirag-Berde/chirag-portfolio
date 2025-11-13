@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import "./connect.css";
 
 const Connect = () => {
-  // Animation variant — bottom to top
   const bottomVariant = {
     hidden: { opacity: 0, y: 60 },
     visible: {

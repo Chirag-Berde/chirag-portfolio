@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import "./works.css";
 import movieClub from "../../assets/works/movie-club.webp";
@@ -50,7 +49,6 @@ const Works = () => {
   return (
     <section className="works" id="works">
       <div className="container">
-        {/* Title and CTA */}
         <div className="works-title-wrapper d-flex justify-content-between mb-lg-5 mb-4">
           <motion.div
             className="works-title-leftcolumn"
@@ -80,7 +78,6 @@ const Works = () => {
           </motion.div>
         </div>
 
-        {/* Works List */}
         <div className="works-data">
           {worksData.map((item, index) => (
             <a
@@ -90,7 +87,6 @@ const Works = () => {
               key={index}
             >
               <div className="works-data-wrapper mb-3">
-                {/* Image - animate from bottom */}
                 <motion.div
                   className="works-data-img"
                   variants={bottomVariant}
@@ -108,7 +104,6 @@ const Works = () => {
                   />
                 </motion.div>
 
-                {/* Title + Subtitle - animate from bottom */}
                 <motion.div
                   className="works-data-content-wrapper d-flex justify-content-between mt-3 mb-5"
                   variants={bottomVariant}

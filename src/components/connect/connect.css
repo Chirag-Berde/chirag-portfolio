@@ -17,10 +17,12 @@
   text-decoration: underline;
   font-size: 1rem;
 }
+
 @media screen and (max-width: 992px) {
   .connect {
     padding: 2rem 0;
   }
+  
   .connect-title {
     font-size: 3.5rem;
     line-height: 1;

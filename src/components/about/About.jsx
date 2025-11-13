@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import "./about.css";
 
 const About = () => {
-  // Animation variants
   const leftVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -67,7 +66,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE CONTENT */}
           <motion.div
             className="col-lg-3 d-lg-block d-none"
             variants={rightVariant}

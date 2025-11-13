@@ -28,11 +28,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
     },
   ];
   return (
-    <div
-      className={`container-fluid bg-dark ${
-        showLinks ? "vh-100" : ""
-      }`}
-    >
+    <div className={`container-fluid bg-dark ${showLinks ? "vh-100" : ""}`}>
       <div className="container">
         <div className={`headerInnerWrapper ${showLinks ? "show  py-4" : ""}`}>
           <div className="pb-5">
@@ -59,7 +55,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
               );
             })}
           </div>
-          <div className="row gy-3 headerInnerWrapper-bottomcontent border-top-gray pt-lg-4 pt-3 align-items-center" >
+          <div className="row gy-3 headerInnerWrapper-bottomcontent border-top-gray pt-lg-4 pt-3 align-items-center">
             <div className="col-lg-12">
               <div className="text-gray-2 bottomcontent-title">Follow me.</div>
               <div className="row gy-3 mt-lg-4 mt-2">
@@ -116,7 +112,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                   />
                 </a>
               </div>
-            </div>           
+            </div>
           </div>
         </div>
       </div>

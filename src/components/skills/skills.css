@@ -60,7 +60,7 @@
   .skill-img {
     filter: grayscale(0%);
   }
-  
+
   .skills::after,
   .skills::before {
     background: none;

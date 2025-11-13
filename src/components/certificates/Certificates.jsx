@@ -36,7 +36,6 @@ const CertificatesData = [
 ];
 
 const Certificates = () => {
-  // Animation variants
   const titleVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -50,7 +49,7 @@ const Certificates = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2, // delay between each certificate
+        staggerChildren: 0.2, 
       },
     },
   };
@@ -68,7 +67,6 @@ const Certificates = () => {
     <section className="certificates" id="certificates">
       <div className="container">
         <div className="row gap-4 gap-lg-0">
-          {/* Title - slide from left */}
           <motion.div
             className="col-lg-4"
             variants={titleVariant}
@@ -81,7 +79,6 @@ const Certificates = () => {
             </h4>
           </motion.div>
 
-          {/* Certificates list with stagger animation */}
           <motion.div
             className="col-lg-8"
             variants={containerVariant}
