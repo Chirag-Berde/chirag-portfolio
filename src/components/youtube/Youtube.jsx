@@ -5,15 +5,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-
 import {
   Navigation,
   Pagination,
   Autoplay,
   EffectCoverflow,
 } from "swiper/modules";
-
 import { motion, useInView } from "framer-motion";
+import arrowRight from "../../assets/ArrowRight.png";
 
 const leftToRight = {
   hidden: { opacity: 0, x: -50 },
@@ -189,7 +188,14 @@ const Youtube = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            View all videos →
+            View all videos{" "}
+            <img
+              src={arrowRight}
+              className="img-fluid"
+              alt="arrow-right"
+              loading="lazy"
+              decoding="async"
+            />
           </motion.a>
         </div>
 

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import "./works.css";
 import movieClub from "../../assets/works/movie-club.webp";
 import resumeBuilder from "../../assets/works/resume-builder.webp";
+import arrowRight from "../../assets/ArrowRight.png";
 
 const worksData = [
   {
@@ -73,7 +74,14 @@ const Works = () => {
               rel="noopener noreferrer"
               className="border-black text-black"
             >
-              View all works &#8594;
+              View all works{" "}
+              <img
+                src={arrowRight}
+                className="img-fluid"
+                alt="arrow-right"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </motion.div>
         </div>
@@ -123,7 +131,13 @@ const Works = () => {
 
                   <div className="works-data-cta">
                     <span className="works-data-cta-arow border-black d-inline-block text-black">
-                      &#8594;
+                      <img
+                        src={arrowRight}
+                        className="img-fluid"
+                        alt="arrow-right"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </span>
                   </div>
                 </motion.div>

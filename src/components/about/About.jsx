@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import "./about.css";
+import arrowRight from "../../assets/ArrowRight.png";
 
 const About = () => {
   const leftVariant = {
@@ -60,7 +61,14 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  About Me &#8594;
+                  About Me{" "}
+                  <img
+                    src={arrowRight}
+                    className="img-fluid"
+                    alt="arrow-right"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </a>
               </div>
             </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./herobanner.css";
 import chiragCV from "../../assets/chirag-berde-cv.pdf";
+import arrowRightWhite from "../../assets/ArrowRightWhite.png";
 
 const HeroBanner = () => {
   const [showToast, setShowToast] = useState(false);
@@ -117,7 +118,14 @@ const HeroBanner = () => {
               download
               onClick={handleDownload}
             >
-              Download CV &#8594;
+              Download CV{" "}
+              <img
+                src={arrowRightWhite}
+                className="img-fluid"
+                alt="arrow-right"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </motion.div>
 

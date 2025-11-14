@@ -3,6 +3,8 @@ import "./header.css";
 import hamburgerImg from "../../assets/header/hamburger.png";
 import closeImg from "../../assets/header/close.webp";
 import arrowUpRight from "../../assets/ArrowUpRight.webp";
+import arrowRight from "../../assets/ArrowRight.png";
+import arrowRightWhite from "../../assets/ArrowRightWhite.png";
 
 const HeaderInner = ({ showLinks, setShowLinks }) => {
   const links = [
@@ -28,7 +30,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
     },
   ];
   return (
-    <div className={`container-fluid bg-dark ${showLinks ? "vh-100" : ""}`}>
+    <div className={`bg-dark ${showLinks ? "vh-100" : ""}`}>
       <div className="container">
         <div className={`headerInnerWrapper ${showLinks ? "show  py-4" : ""}`}>
           <div className="pb-5">
@@ -48,7 +50,13 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                         showLinks ? "border-white" : "border-black"
                       } links-arrow`}
                     >
-                      &#8594;
+                      <img
+                        src={arrowRightWhite}
+                        className="img-fluid"
+                        alt="arrow-right"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                   </div>
                 </a>
@@ -160,7 +168,14 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Let's Connect &#8594;
+                Let's Connect{" "}
+                <img
+                  src={bgVisible ? arrowRightWhite : arrowRight}
+                  className="img-fluid"
+                  alt="arrow-right"
+                  loading="lazy"
+                  decoding="async"
+                />
               </a>
             </div>
             <div
