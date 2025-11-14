@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./header.css";
-import hamburgerImg from "../../assets/header/hamburger.webp";
+import hamburgerImg from "../../assets/header/hamburger.png";
 import closeImg from "../../assets/header/close.webp";
 import arrowUpRight from "../../assets/ArrowUpRight.webp";
 
@@ -174,6 +174,8 @@ const Header = () => {
                 alt="hamburger"
                 loading="lazy"
                 decoding="async"
+                width={20}
+                height={20}
               />
             </div>
           </div>
