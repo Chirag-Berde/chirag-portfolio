@@ -149,7 +149,7 @@ const Header = () => {
             <span className={bgVisible ? "text-white" : "text-black"}>B</span>
           </div>
           <div className="header-rightcolumn d-flex gap-3 align-items-center">
-            <div className="header-button d-md-block d-none">
+            <div className="header-button">
               <a
                 href="https://www.linkedin.com/in/chirag-berde-060450253/"
                 className={
