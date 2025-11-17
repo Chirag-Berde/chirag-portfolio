@@ -205,74 +205,73 @@ const Youtube = () => {
             />
           </motion.a>
         </div>
-
-        <motion.div
-          variants={bottomToTop}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          ref={swiperRef}
+      </div>
+      <motion.div
+        variants={bottomToTop}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        ref={swiperRef}
+      >
+        <Swiper
+          onSwiper={setSwiperInstance}
+          modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={3}
+          loop={true}
+          spaceBetween={30}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          navigation
+          pagination={{ clickable: true }}
+          breakpoints={{
+            0: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+          }}
+          className="youtube-swiper"
         >
-          <Swiper
-            onSwiper={setSwiperInstance}
-            modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={3}
-            loop={true}
-            spaceBetween={30}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            coverflowEffect={{
-              rotate: 30,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            navigation
-            pagination={{ clickable: true }}
-            breakpoints={{
-              0: { slidesPerView: 1.5 },
-              768: { slidesPerView: 2 },
-              992: { slidesPerView: 3 },
-            }}
-            className="youtube-swiper"
-          >
-            {youtubeData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <a
-                  href={item.link}
-                  className="youtube-slide-item d-block"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="youtube-thumbnail">
-                    <img
-                      className="img-fluid w-100"
-                      src={item.img.src}
-                      alt={item.img.alt}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div className="youtube-overlay">
-                      <div className="youtube-title text-white mb-2">
-                        {item.title}
-                      </div>
-                      <div className="youtube-description text-light d-lg-block d-none">
-                        {item.description}
-                      </div>
+          {youtubeData.map((item, index) => (
+            <SwiperSlide key={index}>
+              <a
+                href={item.link}
+                className="youtube-slide-item d-block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="youtube-thumbnail">
+                  <img
+                    className="img-fluid w-100"
+                    src={item.img.src}
+                    alt={item.img.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="youtube-overlay">
+                    <div className="youtube-title text-white mb-2">
+                      {item.title}
+                    </div>
+                    <div className="youtube-description text-light d-lg-block d-none">
+                      {item.description}
                     </div>
                   </div>
-                </a>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </motion.div>
-      </div>
+                </div>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </motion.div>
     </section>
   );
 };
