@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./herobanner.css";
 import chiragCV from "../../assets/chirag-berde-cv.pdf";
 import arrowRightWhite from "../../assets/ArrowRightWhite.png";
+import arrowRight from "../../assets/ArrowRight.png";
 
 const HeroBanner = () => {
   const [showToast, setShowToast] = useState(false);
+  const [arrowSrc, setArrowSrc] = useState(arrowRightWhite);
 
   const handleDownload = () => {
     setShowToast(true);
@@ -117,14 +119,18 @@ const HeroBanner = () => {
               rel="noopener noreferrer"
               download
               onClick={handleDownload}
+              onMouseEnter={() => setArrowSrc(arrowRight)}
+              onMouseLeave={() => setArrowSrc(arrowRightWhite)}
             >
               Download CV{" "}
               <img
-                src={arrowRightWhite}
+                src={arrowSrc}
                 className="img-fluid"
                 alt="arrow-right"
                 loading="lazy"
                 decoding="async"
+                height={26}
+                width={26}
               />
             </a>
           </motion.div>

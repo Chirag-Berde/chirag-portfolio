@@ -13,6 +13,7 @@ import {
 } from "swiper/modules";
 import { motion, useInView } from "framer-motion";
 import arrowRight from "../../assets/ArrowRight.png";
+import arrowRightWhite from "../../assets/ArrowRightWhite.png";
 
 const leftToRight = {
   hidden: { opacity: 0, x: -50 },
@@ -30,6 +31,8 @@ const bottomToTop = {
 };
 
 const Youtube = () => {
+  const [arrowSrc, setArrowSrc] = useState(arrowRight);
+
   const youtubeData = [
     {
       title: "Resume Builder | Capstone Project | React | Redux | MaterialUI",
@@ -187,14 +190,18 @@ const Youtube = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
+            onMouseEnter={() => setArrowSrc(arrowRightWhite)}
+            onMouseLeave={() => setArrowSrc(arrowRight)}
           >
             View all videos{" "}
             <img
-              src={arrowRight}
+              src={arrowSrc}
               className="img-fluid"
               alt="arrow-right"
               loading="lazy"
               decoding="async"
+              width={26}
+              height={26}
             />
           </motion.a>
         </div>

@@ -3,6 +3,8 @@ import "./works.css";
 import movieClub from "../../assets/works/movie-club.webp";
 import resumeBuilder from "../../assets/works/resume-builder.webp";
 import arrowRight from "../../assets/ArrowRight.png";
+import arrowRightWhite from "../../assets/ArrowRightWhite.png";
+import { useState } from "react";
 
 const worksData = [
   {
@@ -20,6 +22,8 @@ const worksData = [
 ];
 
 const Works = () => {
+  const [arrowSrc, setArrowSrc] = useState(arrowRight);
+
   const leftVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -73,14 +77,18 @@ const Works = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="border-black text-black"
+              onMouseEnter={() => setArrowSrc(arrowRightWhite)}
+              onMouseLeave={() => setArrowSrc(arrowRight)}
             >
               View all works{" "}
               <img
-                src={arrowRight}
+                src={arrowSrc}
                 className="img-fluid"
                 alt="arrow-right"
                 loading="lazy"
                 decoding="async"
+                width={26}
+                height={26}
               />
             </a>
           </motion.div>

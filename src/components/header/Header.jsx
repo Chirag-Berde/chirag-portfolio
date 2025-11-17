@@ -131,6 +131,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
 const Header = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [bgVisible, setBgVisible] = useState(false);
+  const [arrowSrc, setArrowSrc] = useState(arrowRight);
 
   useEffect(() => {
     if (showLinks) {
@@ -167,14 +168,18 @@ const Header = () => {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={() => setArrowSrc(arrowRightWhite)}
+                onMouseLeave={() => setArrowSrc(arrowRight)}
               >
                 Let's Connect{" "}
                 <img
-                  src={bgVisible ? arrowRightWhite : arrowRight}
+                  src={bgVisible ? arrowRightWhite : arrowSrc}
                   className="img-fluid"
                   alt="arrow-right"
                   loading="lazy"
                   decoding="async"
+                  width={26}
+                  height={26}
                 />
               </a>
             </div>
