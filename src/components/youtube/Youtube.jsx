@@ -239,6 +239,7 @@ const Youtube = () => {
             0: { slidesPerView: 1.5 },
             768: { slidesPerView: 2 },
             992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 },
           }}
           className="youtube-swiper"
         >
@@ -259,11 +260,8 @@ const Youtube = () => {
                     decoding="async"
                   />
                   <div className="youtube-overlay">
-                    <div className="youtube-title text-white mb-2">
+                    <div className="youtube-title text-white mb-2 mb-lg-0">
                       {item.title}
-                    </div>
-                    <div className="youtube-description text-light d-lg-block d-none">
-                      {item.description}
                     </div>
                   </div>
                 </div>
