@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import "./about.css";
 import arrowRight from "../../assets/ArrowRight.png";
+import arrowRightWhite from "../../assets/ArrowRightWhite.png";
+import { useState } from "react";
 
 const About = () => {
+  const [arrowSrc, setArrowSrc] = useState(arrowRight);
+
   const leftVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -60,14 +64,18 @@ const About = () => {
                   className="border-black text-black"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onMouseEnter={() => setArrowSrc(arrowRightWhite)}
+                  onMouseLeave={() => setArrowSrc(arrowRight)}
                 >
                   About Me{" "}
                   <img
-                    src={arrowRight}
+                    src={arrowSrc}
                     className="img-fluid"
                     alt="arrow-right"
                     loading="lazy"
                     decoding="async"
+                    width={26}
+                    height={26}
                   />
                 </a>
               </div>
