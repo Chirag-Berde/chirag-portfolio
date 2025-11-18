@@ -36,8 +36,6 @@ const Youtube = () => {
   const youtubeData = [
     {
       title: "Resume Builder | Capstone Project | React | Redux | MaterialUI",
-      description:
-        "This is a resume builder created using React.It is a single page application...",
       img: {
         src: "https://i.ytimg.com/vi/nfnIQ1w5vNI/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAYfP1Kz2uTW9F_7QUluByxoCR9uQ",
         alt: "Resume Builder",
@@ -47,8 +45,6 @@ const Youtube = () => {
     {
       title:
         "E-commerce Website | React Js | React Bootstrap | Async Await | Fetch Api",
-      description:
-        "E-commerce website using React.js and Fetch API. We’ll be tapping into all the extra features...",
       img: {
         src: "https://i.ytimg.com/vi/m5BBogYexXQ/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAnEl_UyyG8B9jji1VNgJ2Y4csKMw",
         alt: "Ecommerce",
@@ -58,8 +54,6 @@ const Youtube = () => {
     {
       title:
         "Todo List App Using React Js | React UseEffect | State Management",
-      description:
-        "Todo list App created using React JS is a single page application (SPA) that utilizes state management...",
       img: {
         src: "https://i.ytimg.com/vi/Wsp3cmeEClM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAdHEzFkvVQqeP6xd4wrIdehxZasg",
         alt: "Todo",
@@ -68,8 +62,6 @@ const Youtube = () => {
     },
     {
       title: "Responsive Netflix Clone Using Bootstrap 5 & JavaScript",
-      description:
-        "Leverage the power of Bootstrap and JavaScript, coupled with some custom CSS magic to elevate the user experience...",
       img: {
         src: "https://i.ytimg.com/vi/UGsBQ7gR54c/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB809f6Hbw7H7mjycCEcY03RGH7UA",
         alt: "Netflix",
@@ -78,8 +70,6 @@ const Youtube = () => {
     },
     {
       title: "Instagram Login Page Using Bootstrap 5 | Custom CSS",
-      description:
-        "Welcome to another exciting video where we'll talk about how to create an Instagram login page using Bootstrap5 and custom CSS....",
       img: {
         src: "https://i.ytimg.com/vi/UOC0VUMKMEA/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDbv-Hmo7cWl43vRqpwVXniw1A5EQ",
         alt: "Instagram Login Page",
@@ -89,8 +79,6 @@ const Youtube = () => {
     {
       title:
         "Building a Responsive News Website with Async/Await & Fetch API! 💡💻",
-      description:
-        "Explore the future of web development in this thrilling video! 🌐 We've crafted an ...",
       img: {
         src: "https://i.ytimg.com/vi/GauceUv5HXo/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCjjP3br7se4S4h6DH4WfxxYO-HNg",
         alt: "News Website",
@@ -99,8 +87,6 @@ const Youtube = () => {
     },
     {
       title: "Fully Responsive LinkedIn Clone Using Bootstrap 5 | Custom CSS",
-      description:
-        "In this video, we introduce a clone of the popular professional networking platform LinkedIn, created ...",
       img: {
         src: "https://i.ytimg.com/vi/DwVCmRRnEvU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDenoYYvu1mAOyXta8UzSD4nPioVA",
         alt: "Linkedin Clone",
@@ -110,8 +96,6 @@ const Youtube = () => {
     {
       title:
         "Build a Fully Responsive Pepsi.com Clone with Bootstrap 5 | Custom CSS",
-      description:
-        "🔥 Welcome to our comprehensive tutorial on building a fully responsive Pepsi.com clone...",
       img: {
         src: "https://i.ytimg.com/vi/qwO-342zJIA/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB2ayArWfktijPrX4hdDe-DyFi_rw",
         alt: "Pepsi clone",
@@ -121,8 +105,6 @@ const Youtube = () => {
     {
       title:
         "Fully Responsive Google Meet UI using HTML5, CSS3, Bootstrap 5, and Custom CSS! 🚀",
-      description:
-        "Explore the world of fully responsive Google Meet UI in this tutorial! Learn how to craft...",
       img: {
         src: "https://i.ytimg.com/vi/2vkeTGKoGCI/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDBaV9sXxNYGJ1T_zEnAoNOmeOo3w",
         alt: "Google Meet",
@@ -132,8 +114,6 @@ const Youtube = () => {
     {
       title:
         "Build an Amazon Prime Video Clone with Bootstrap 5 and JS | Fully Responsive | Custom CSS Magic! 💻🎥",
-      description:
-        "🚀 Dive into the world of streaming with this exciting Amazon Prime Video clone tutorial! 🎥✨...",
       img: {
         src: "https://i.ytimg.com/vi/NDE7g5sZVRg/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBkhE9_Gq2wMme4F1Jh6-TFcHs-mg",
         alt: "Amazon Prime Video",
@@ -143,8 +123,6 @@ const Youtube = () => {
     {
       title:
         "How to create fully responsive website using Bootstrap 5 | Custom CSS",
-      description:
-        "In this video, we're diving deep into the world of web design using Bootstrap 5 and JavaScript...",
       img: {
         src: "https://i.ytimg.com/vi/Yw-9lDxwjc4/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAln-IgG7aRLtCb4cgIPpJsSCdo4g",
         alt: "bootstrap",
