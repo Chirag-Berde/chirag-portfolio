@@ -32,8 +32,8 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
   return (
     <div className={`bg-dark ${showLinks ? "vh-100" : ""}`}>
       <div className="container">
-        <div className={`headerInnerWrapper ${showLinks ? "show  py-4" : ""}`}>
-          <div className="pb-5">
+        <div className={`headerInnerWrapper ${showLinks ? "show  py-3" : ""}`}>
+          <div className="pb-4">
             {links.map((item) => {
               return (
                 <a
@@ -43,7 +43,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                   } headerInnerWrapper-link`}
                   onClick={() => setShowLinks(false)}
                 >
-                  <div className="links-wrapper d-flex align-items-center justify-content-between my-2 my-lg-0">
+                  <div className="links-wrapper d-flex align-items-center justify-content-between my-2">
                     <div className="links-text">{item.label}</div>
                     <div
                       className={`${
@@ -63,7 +63,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
               );
             })}
           </div>
-          <div className="row gy-3 headerInnerWrapper-bottomcontent border-top-gray pt-lg-4 pt-3 align-items-center">
+          <div className="row gy-3 headerInnerWrapper-bottomcontent border-top-gray pt-2 align-items-center">
             <div className="col-lg-12">
               <div className="text-gray-2 bottomcontent-title">Follow me.</div>
               <div className="row gy-3 mt-lg-4 mt-2">
