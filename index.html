@@ -20,30 +20,34 @@
     <style>
       .preloader {
         position: fixed;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
-        background-color: #fff;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 9999;
       }
 
-      .preloader:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        width: 30px;
-        height: 30px;
-        margin: -30px 0 0 -30px;
-        border-radius: 50%;
-        border: 6px solid #333;
-        border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
+      .cb-loader {
+        font-size: 2.5rem;
+        font-weight: 700;
+        animation: rotateCB 1.2s linear infinite;
       }
 
-      @keyframes spin {
+      .text-gray-2 {
+        color: #a0a0a0;
+      }
+
+      .text-black {
+        color: #000000;
+      }
+
+      @keyframes rotateCB {
+        from {
+          transform: rotate(0deg);
+        }
         to {
           transform: rotate(360deg);
         }
@@ -52,7 +56,11 @@
   </head>
   <body>
     <div id="root">
-      <div class="preloader"></div>
+      <div class="preloader">
+        <div class="cb-loader">
+          <span class="text-gray-2">C</span><span class="text-black">B</span>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.jsx"></script>
     <script
