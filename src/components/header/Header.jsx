@@ -107,7 +107,7 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                   />
                 </a>
                 <a
-                  href="https://instagram.com/chiragggg__"
+                  href="https://www.instagram.com/chirag.berde"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="col-lg-3 col-6 text-white text-uppercase"
