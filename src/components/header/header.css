@@ -1,3 +1,9 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
 .header-leftcolumn span {
   font-size: 36px;
   font-weight: 700;
