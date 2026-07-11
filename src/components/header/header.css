@@ -2,6 +2,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 20;
+  background: white;
 }
 
 .header-leftcolumn span {
