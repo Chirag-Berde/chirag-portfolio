@@ -75,6 +75,8 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                 >
                   LinkedIn{" "}
                   <img
+                    loading="lazy"
+                    decoding="async"
                     src={arrowUpRight}
                     alt="arrowUpRights"
                     className="img-fluid"
@@ -91,6 +93,8 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                     src={arrowUpRight}
                     alt="arrowUpRights"
                     className="img-fluid"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
                 <a
@@ -104,6 +108,8 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                     src={arrowUpRight}
                     alt="arrowUpRights"
                     className="img-fluid"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
                 <a
@@ -117,6 +123,8 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
                     src={arrowUpRight}
                     alt="arrowUpRights"
                     className="img-fluid"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </div>

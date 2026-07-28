@@ -106,7 +106,12 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img src={aboutBg} className="about-bg-img" />
+          <img
+            src={aboutBg}
+            className="about-bg-img"
+            loading="lazy"
+            decoding="async"
+          />
         </motion.div>
       </div>
     </section>
