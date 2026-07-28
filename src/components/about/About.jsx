@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import "./about.css";
 import arrowRight from "../../assets/ArrowRight.png";
 import arrowRightWhite from "../../assets/ArrowRightWhite.png";
+import aboutBg from "../../assets/about/about-bg.png";
 import { useState } from "react";
 
 const About = () => {
@@ -98,6 +99,15 @@ const About = () => {
             </ul>
           </motion.div>
         </div>
+        <motion.div
+          className="about-bg-wrapper d-lg-block d-none"
+          variants={rightVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <img src={aboutBg} className="about-bg-img" />
+        </motion.div>
       </div>
     </section>
   );

@@ -2,6 +2,10 @@
   padding: 3rem 0;
 }
 
+.about .container {
+  position: relative;
+}
+
 .about-title {
   font-size: 4.75rem;
   font-weight: 600;
@@ -36,11 +40,23 @@
   text-align: start;
 }
 
+.about .about-bg-wrapper {
+  position: absolute;
+  right: 0;
+  top: -75px;
+}
+
+.about .about-bg-wrapper .about-bg-img {
+  width: 100%;
+  max-width: 250px;
+  transform: rotate(-28deg);
+}
+
 @media screen and (max-width: 992px) {
   .about {
     padding: 2rem 0;
   }
-  
+
   .about-title {
     font-size: 3.75rem;
     line-height: 54px;
