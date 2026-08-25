@@ -1,10 +1,12 @@
-const CACHE_NAME = 'chirag-portfolio-v3'
+const CACHE_NAME = 'chirag-portfolio-v4'
 const PRECACHE_URLS = JSON.parse('PRECACHE_MANIFEST')
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(PRECACHE_URLS))
+      // Cache.addAll() fails the entire install if one URL is unavailable.
+      // Keep the app available even if a non-essential asset cannot be cached.
+      .then((cache) => Promise.allSettled(PRECACHE_URLS.map((url) => cache.add(url))))
       .then(() => self.skipWaiting()),
   )
 })

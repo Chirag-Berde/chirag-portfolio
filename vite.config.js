@@ -22,7 +22,9 @@ function injectServiceWorkerManifest() {
       const workerPath = join(outDir, 'sw.js')
       const manifest = filesIn(outDir)
         .filter((filePath) => filePath !== workerPath)
-        .map((filePath) => `/${relative(outDir, filePath).replaceAll('\\', '/')}`)
+        .map((filePath) => relative(outDir, filePath).replaceAll('\\', '/'))
+        .filter((filePath) => !filePath.startsWith('_'))
+        .map((filePath) => `/${filePath}`)
       const worker = readFileSync(workerPath, 'utf8')
         .replace("JSON.parse('PRECACHE_MANIFEST')", JSON.stringify(manifest))
 
