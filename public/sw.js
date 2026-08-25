@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chirag-portfolio-v1'
+const CACHE_NAME = 'chirag-portfolio-v2'
 const APP_SHELL = ['./', './index.html', './cb-favicon.png']
 
 self.addEventListener('install', (event) => {
@@ -53,7 +53,7 @@ self.addEventListener('fetch', (event) => {
         const copy = response.clone()
         caches.open(CACHE_NAME).then((cache) => cache.put(request, copy))
         return response
-      })
+      }).catch(() => new Response('', { status: 504, statusText: 'Offline' }))
     }),
   )
 })
