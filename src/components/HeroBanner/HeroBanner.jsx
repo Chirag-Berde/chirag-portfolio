@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./herobanner.css";
-import chiragCV from "../../assets/chirag-berde-cv.pdf";
+import chiragCV from "../../assets/Chirag-Berde-CV.pdf";
 import arrowRightWhite from "../../assets/ArrowRightWhite.png";
 import arrowRight from "../../assets/ArrowRight.png";
 

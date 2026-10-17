@@ -34,9 +34,10 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
       <div className="container">
         <div className={`headerInnerWrapper ${showLinks ? "show  py-3" : ""}`}>
           <div className="pb-4">
-            {links.map((item) => {
+            {links.map((item, index) => {
               return (
                 <a
+                  key={index}
                   href={item.href}
                   className={`${
                     showLinks ? "text-white" : "text-black"
