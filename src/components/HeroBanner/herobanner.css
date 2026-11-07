@@ -25,8 +25,7 @@
 
 .herobanner-additional-content-cta a:hover {
   color: #000000 !important;
-  background: white;
-  transition: 1s;
+  background-color: white;
 }
 
 .herobanner-additional-content-text {

@@ -26,8 +26,7 @@
 
 .about-cta a:hover {
   color: white !important;
-  background: #000000;
-  transition: 1s;
+  background-color: #000000;
 }
 
 .about-lists li {

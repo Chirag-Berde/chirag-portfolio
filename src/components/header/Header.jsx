@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useLayoutEffect, useRef } from "react";
 import "./header.css";
 import hamburgerImg from "../../assets/header/hamburger.png";
 import closeImg from "../../assets/header/close.webp";
@@ -140,9 +140,30 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
 const Header = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [bgVisible, setBgVisible] = useState(false);
-  const [arrowSrc, setArrowSrc] = useState(arrowRight);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const headerWrapperRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    const headerWrapper = headerWrapperRef.current;
+    if (!headerWrapper) return;
+
+    const updateHeaderHeight = () => {
+      const borderBottomWidth = parseFloat(
+        getComputedStyle(headerWrapper).borderBottomWidth,
+      );
+      setHeaderHeight(
+        headerWrapper.getBoundingClientRect().height - borderBottomWidth,
+      );
+    };
+
+    updateHeaderHeight();
+    const resizeObserver = new ResizeObserver(updateHeaderHeight);
+    resizeObserver.observe(headerWrapper);
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  useLayoutEffect(() => {
     if (showLinks) {
       setBgVisible(true);
     } else {
@@ -155,63 +176,82 @@ const Header = () => {
     setShowLinks((prev) => !prev);
   };
   return (
-    <nav className={`${bgVisible ? "bg-dark position-fixed w-100" : ""}`}>
-      <div className="container">
+    <>
+      {bgVisible && (
         <div
-          className={`${
-            showLinks ? "border-bottom-gray" : ""
-          } header-wrapper d-flex justify-content-between py-4 align-items-center`}
-        >
-          <div className="header-leftcolumn">
-            <span className="text-gray-2">C</span>
-            <span className={bgVisible ? "text-white" : "text-black"}>B</span>
-          </div>
-          <div className="header-rightcolumn d-flex gap-3 align-items-center">
-            <div className="header-button">
-              <a
-                href="https://www.linkedin.com/in/chirag-berde-060450253/"
-                className={
-                  bgVisible
-                    ? "text-white border-white"
-                    : "text-black border-black"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={() => setArrowSrc(arrowRightWhite)}
-                onMouseLeave={() => setArrowSrc(arrowRight)}
+          aria-hidden="true"
+          className="header-placeholder"
+          style={{ height: `${headerHeight}px` }}
+        />
+      )}
+      <nav className={`${bgVisible ? "bg-dark position-fixed w-100" : ""}`}>
+        <div className="container">
+          <div
+            ref={headerWrapperRef}
+            className={`${
+              showLinks ? "border-bottom-gray" : ""
+            } header-wrapper d-flex justify-content-between py-4 align-items-center`}
+          >
+            <div className="header-leftcolumn">
+              <span className="text-gray-2">C</span>
+              <span className={bgVisible ? "text-white" : "text-black"}>
+                B
+              </span>
+            </div>
+            <div className="header-rightcolumn d-flex gap-3 align-items-center">
+              <div className="header-button">
+                <a
+                  href="https://www.linkedin.com/in/chirag-berde-060450253/"
+                  className={
+                    `image-hover-button ${
+                      bgVisible
+                        ? "text-white border-white"
+                        : "text-black border-black"
+                    }`
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Let's Connect{" "}
+                  <span className="button-arrow" aria-hidden="true">
+                    <img
+                      src={bgVisible ? arrowRightWhite : arrowRight}
+                      className="button-arrow-default"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      src={arrowRightWhite}
+                      className="button-arrow-hover"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                </a>
+              </div>
+              <div
+                className={`${
+                  bgVisible ? "border-white" : "border-black"
+                } hamburger`}
+                onClick={handleShowLinks}
               >
-                Let's Connect{" "}
                 <img
-                  src={bgVisible ? arrowRightWhite : arrowSrc}
-                  className="img-fluid"
-                  alt="arrow-right"
+                  src={bgVisible ? closeImg : hamburgerImg}
+                  alt="hamburger"
                   loading="lazy"
                   decoding="async"
-                  width={26}
-                  height={26}
+                  width={20}
+                  height={20}
                 />
-              </a>
-            </div>
-            <div
-              className={`${
-                bgVisible ? "border-white" : "border-black"
-              } hamburger`}
-              onClick={handleShowLinks}
-            >
-              <img
-                src={bgVisible ? closeImg : hamburgerImg}
-                alt="hamburger"
-                loading="lazy"
-                decoding="async"
-                width={20}
-                height={20}
-              />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <HeaderInner showLinks={showLinks} setShowLinks={setShowLinks} />
-    </nav>
+        <HeaderInner showLinks={showLinks} setShowLinks={setShowLinks} />
+      </nav>
+    </>
   );
 };
 

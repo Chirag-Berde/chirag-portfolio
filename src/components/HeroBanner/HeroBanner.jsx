@@ -7,7 +7,6 @@ import arrowRight from "../../assets/ArrowRight.png";
 
 const HeroBanner = () => {
   const [showToast, setShowToast] = useState(false);
-  const [arrowSrc, setArrowSrc] = useState(arrowRightWhite);
 
   const handleDownload = () => {
     setShowToast(true);
@@ -114,24 +113,29 @@ const HeroBanner = () => {
           >
             <a
               href={chiragCV}
-              className="border-black text-black"
+              className="image-hover-button border-black text-black"
               target="_blank"
               rel="noopener noreferrer"
               download
               onClick={handleDownload}
-              onMouseEnter={() => setArrowSrc(arrowRight)}
-              onMouseLeave={() => setArrowSrc(arrowRightWhite)}
             >
               Download CV{" "}
-              <img
-                src={arrowSrc}
-                className="img-fluid"
-                alt="arrow-right"
-                loading="lazy"
-                decoding="async"
-                height={26}
-                width={26}
-              />
+              <span className="button-arrow" aria-hidden="true">
+                <img
+                  src={arrowRightWhite}
+                  className="button-arrow-default"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src={arrowRight}
+                  className="button-arrow-hover"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
             </a>
           </motion.div>
 

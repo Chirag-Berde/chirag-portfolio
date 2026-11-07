@@ -3,11 +3,8 @@ import "./about.css";
 import arrowRight from "../../assets/ArrowRight.png";
 import arrowRightWhite from "../../assets/ArrowRightWhite.png";
 import aboutBg from "../../assets/about/about-bg.png";
-import { useState } from "react";
 
 const About = () => {
-  const [arrowSrc, setArrowSrc] = useState(arrowRight);
-
   const leftVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -62,22 +59,27 @@ const About = () => {
               <div className="about-cta">
                 <a
                   href="https://github.com/chirag-berde"
-                  className="border-black text-black"
+                  className="image-hover-button border-black text-black"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onMouseEnter={() => setArrowSrc(arrowRightWhite)}
-                  onMouseLeave={() => setArrowSrc(arrowRight)}
                 >
                   About Me{" "}
-                  <img
-                    src={arrowSrc}
-                    className="img-fluid"
-                    alt="arrow-right"
-                    loading="lazy"
-                    decoding="async"
-                    width={26}
-                    height={26}
-                  />
+                  <span className="button-arrow" aria-hidden="true">
+                    <img
+                      src={arrowRight}
+                      className="button-arrow-default"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <img
+                      src={arrowRightWhite}
+                      className="button-arrow-hover"
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
                 </a>
               </div>
             </div>

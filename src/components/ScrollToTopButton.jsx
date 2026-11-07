@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import arrowRight from "../assets/ArrowRight.png";
+import arrowRightWhite from "../assets/ArrowRightWhite.png";
 
 const ScrollToTopButton = () => {
   const [visible, setVisible] = useState(false);
@@ -46,7 +48,7 @@ const ScrollToTopButton = () => {
         right: "0",
         bottom: "0",
         margin: "1rem",
-        padding: "0.75rem 1rem",
+        padding: ".5rem .75rem",
         backgroundColor: overFooter ? "#ffffff" : "#000000",
         color: overFooter ? "#000000" : "#ffffff",
         border: "none",
@@ -59,7 +61,13 @@ const ScrollToTopButton = () => {
         zIndex: 12,
       }}
     >
-      ↑
+      <img
+        src={overFooter ? arrowRight : arrowRightWhite}
+        alt="Scroll to top"
+        width={15}
+        height={15}
+        style={{ transform: "rotate(-90deg)" }}
+      />
     </button>
   );
 };

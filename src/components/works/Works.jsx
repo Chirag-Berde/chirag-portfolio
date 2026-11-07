@@ -4,7 +4,6 @@ import movieClub from "../../assets/works/movie-club.webp";
 import resumeBuilder from "../../assets/works/resume-builder.webp";
 import arrowRight from "../../assets/ArrowRight.png";
 import arrowRightWhite from "../../assets/ArrowRightWhite.png";
-import { useState } from "react";
 
 const worksData = [
   {
@@ -22,8 +21,6 @@ const worksData = [
 ];
 
 const Works = () => {
-  const [arrowSrc, setArrowSrc] = useState(arrowRight);
-
   const leftVariant = {
     hidden: { opacity: 0, x: -100 },
     visible: {
@@ -76,20 +73,25 @@ const Works = () => {
               href="https://github.com/chirag-berde"
               target="_blank"
               rel="noopener noreferrer"
-              className="border-black text-black"
-              onMouseEnter={() => setArrowSrc(arrowRightWhite)}
-              onMouseLeave={() => setArrowSrc(arrowRight)}
+              className="image-hover-button border-black text-black"
             >
               View all works{" "}
-              <img
-                src={arrowSrc}
-                className="img-fluid"
-                alt="arrow-right"
-                loading="lazy"
-                decoding="async"
-                width={26}
-                height={26}
-              />
+              <span className="button-arrow" aria-hidden="true">
+                <img
+                  src={arrowRight}
+                  className="button-arrow-default"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src={arrowRightWhite}
+                  className="button-arrow-hover"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
             </a>
           </motion.div>
         </div>
