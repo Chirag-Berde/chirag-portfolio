@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import "./header.css";
 import hamburgerImg from "../../assets/header/hamburger.png";
 import closeImg from "../../assets/header/close.webp";
@@ -140,8 +140,10 @@ const HeaderInner = ({ showLinks, setShowLinks }) => {
 const Header = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [bgVisible, setBgVisible] = useState(false);
+  const [headerHidden, setHeaderHidden] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerWrapperRef = useRef(null);
+  const previousScrollY = useRef(0);
 
   useLayoutEffect(() => {
     const headerWrapper = headerWrapperRef.current;
@@ -172,6 +174,27 @@ const Header = () => {
     }
   }, [showLinks]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (showLinks || currentScrollY <= 80) {
+        setHeaderHidden(false);
+      } else if (currentScrollY > previousScrollY.current + 3) {
+        setHeaderHidden(true);
+      } else if (currentScrollY < previousScrollY.current - 3) {
+        setHeaderHidden(false);
+      }
+
+      previousScrollY.current = currentScrollY;
+    };
+
+    previousScrollY.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [showLinks]);
+
   const handleShowLinks = () => {
     setShowLinks((prev) => !prev);
   };
@@ -184,7 +207,11 @@ const Header = () => {
           style={{ height: `${headerHeight}px` }}
         />
       )}
-      <nav className={`${bgVisible ? "bg-dark position-fixed w-100" : ""}`}>
+      <nav
+        className={`sticky-header ${
+          headerHidden && !showLinks ? "header-hidden" : ""
+        } ${bgVisible ? "bg-dark position-fixed w-100" : ""}`}
+      >
         <div className="container">
           <div
             ref={headerWrapperRef}
