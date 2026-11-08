@@ -18,7 +18,7 @@ function injectServiceWorkerManifest() {
     configResolved(config) {
       outDir = config.build.outDir
     },
-    closeBundle() {
+    writeBundle() {
       const workerPath = join(outDir, 'sw.js')
       const manifest = filesIn(outDir)
         .filter((filePath) => filePath !== workerPath)
