@@ -53,7 +53,7 @@ const HeroBanner = () => {
       <div className="container">
         <div
           className={`toast-container position-fixed top-0 start-50 translate-middle-x p-3`}
-          style={{ zIndex: 1055 }}
+          style={{ zIndex: 10556666 }}
         >
           <AnimatePresence>
             {showToast && (
