@@ -1,12 +1,11 @@
-const CACHE_NAME = 'chirag-portfolio-v4'
+const CACHE_NAME = 'chirag-portfolio-CACHE_VERSION'
 const PRECACHE_URLS = JSON.parse('PRECACHE_MANIFEST')
+const APP_SHELL_URL = new URL('index.html', self.registration.scope).href
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      // Cache.addAll() fails the entire install if one URL is unavailable.
-      // Keep the app available even if a non-essential asset cannot be cached.
-      .then((cache) => Promise.allSettled(PRECACHE_URLS.map((url) => cache.add(url))))
+      .then((cache) => cache.addAll(PRECACHE_URLS))
       .then(() => self.skipWaiting()),
   )
 })
@@ -37,11 +36,13 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          const copy = response.clone()
-          event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.put('/index.html', copy)))
+          if (response.ok) {
+            const copy = response.clone()
+            event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.put(APP_SHELL_URL, copy)))
+          }
           return response
         })
-        .catch(() => caches.match('./index.html')),
+        .catch(() => caches.match(APP_SHELL_URL)),
     )
     return
   }
